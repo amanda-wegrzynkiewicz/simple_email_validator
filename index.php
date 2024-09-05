@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
-require_once 'Services/UserValidator.php';
+require_once "vendor/autoload.php";
+
+use App\Services\UserValidator;
 
 $validator = new UserValidator();
 $email = "test@example.com";

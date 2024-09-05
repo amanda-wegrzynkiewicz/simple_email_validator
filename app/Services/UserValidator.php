@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Services;
+
 class UserValidator
 {
     public function validateEmail(string $email): bool
