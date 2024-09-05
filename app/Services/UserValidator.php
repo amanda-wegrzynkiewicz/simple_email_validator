@@ -13,6 +13,6 @@ class UserValidator
     public function validatePassword(string $password): bool
     {
         $pattern = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/';
-        return preg_match($pattern, $password) === 1;
+        return preg_match($pattern, $password);
     }
 }
