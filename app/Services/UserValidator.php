@@ -7,7 +7,7 @@ class UserValidator
     public function validateEmail(string $email): bool
     {
         $pattern = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
-        return preg_match($pattern, $email) === 1;
+        return filter_var($email, FILTER_VALIDATE_EMAIL) && preg_match($pattern, $email);
     }
 
     public function validatePassword(string $password): bool
